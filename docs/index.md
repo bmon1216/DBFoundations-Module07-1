@@ -18,3 +18,9 @@ User-Defined Functions allow for more efficient programming, faster execution, a
 >**3.	Reduced Traffic.**  Developers can express complex operations as a Function and then call them the Where clause to lessen the number of individual rows sent to the server client.  
   
 (Microsoft website, <https://docs.microsoft.com/en-us/sql/relational-databases/user-defined-functions/user-defined-functions?view=sql-server-ver15> (external site), 2021.03.02).
+  
+## Scalar, Inline, and Multi-Statement Functions: Differences  
+Scalar Functions return a single value of the data type the programmer defines in the Returns clause.  Scalar Functions work on each record independently and base their results on user input.  For Inline Functions, the returned value results from a single Select statement.  Inline Functions are similar to Views because they can contain only a single Select statement and the columns in the Select statement become the column names in the returned table.  A Multi-Statement function can include several Select statements that return a single value.  Multi-Statement Functions require the Begin and End syntax and generally execute more slowly than Inline Functions.  The data type specified in the Returns clause of these Functions can be any except Text, Ntext, Image, Cursor, and Timestamp. (Database.Guide website, <https://database.guide/difference-between-multi-statement-table-valued-functions-inline-table-valued-functions-in-sql-server/> (external site), 2021.03.02).  
+  
+## Summary
+Microsoft SQL Server contains powerful tools used to store complex calculations for repetitious use.  User-Defined Functions allow programmers to create and store their own custom Functions within the database files rather than the script.  Programmers must know the varying syntax differences and use cases for developers to fully realize the capabilities and efficiencies Functions offer in Microsoft SQL Server.  
